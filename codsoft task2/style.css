@@ -1,0 +1,252 @@
+/* ===============================
+   GLOBAL STYLES
+================================ */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background: #f4f7ff;
+  color: #222;
+  background-image: url("https://images.unsplash.com/photo-1521737604893-d14cc237f11d");
+}
+
+/* ===============================
+   NAVBAR
+================================ */
+.navbar {
+  background: linear-gradient(90deg, #201f2b, #f7f5f8);
+  box-shadow: 0 4px 20px rgba(198, 191, 191, 0.2);
+}
+
+.navbar-brand {
+  font-weight: bold;
+  font-size: 22px;
+  letter-spacing: 1px;
+}
+
+.nav-link {
+  font-weight: 500;
+  margin-left: 15px;
+  transition: 0.3s;
+}
+
+.nav-link:hover {
+  color: #ffdd57 !important;
+  transform: translateY(-2px);
+}
+
+/* ===============================
+   HOME SECTION
+================================ */
+.home {
+  min-height: 100vh;
+  background: linear-gradient(-45deg, #4f46e5, #9333ea, #ec4899, #22c55e);
+  background-size: 400% 400%;
+  animation: gradientBG 10s ease infinite;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  color: #fff;
+}
+
+@keyframes gradientBG {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.home h4 {
+  letter-spacing: 3px;
+  animation: slideDown 1.2s ease;
+}
+
+.home h1 {
+  font-size: 55px;
+  font-weight: 700;
+  margin: 10px 0;
+  animation: slideLeft 1.5s ease;
+}
+
+.home p {
+  font-size: 18px;
+  animation: slideRight 1.5s ease;
+}
+
+.home .btn {
+  padding: 12px 30px;
+  border-radius: 30px;
+  font-weight: bold;
+  animation: fadeIn 2s ease;
+}
+
+/* ===============================
+   ANIMATIONS
+================================ */
+@keyframes slideLeft {
+  from { opacity: 0; transform: translateX(-80px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes slideRight {
+  from { opacity: 0; transform: translateX(80px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes slideDown {
+  from { opacity: 0; transform: translateY(-80px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+/* ===============================
+   SECTION COMMON
+================================ */
+.section-padding {
+  padding: 80px 0;
+}
+
+.section-title h2 {
+  font-size: 36px;
+  font-weight: 700;
+}
+
+.section-title span {
+  color: #4f46e5;
+}
+
+/* ===============================
+   ABOUT SECTION
+================================ */
+#about {
+  background: #ffffff;
+}
+
+#about p {
+  font-size: 16px;
+  line-height: 1.8;
+}
+
+#about strong {
+  color: #4f46e5;
+}
+
+/* ===============================
+   SKILLS / CARDS
+================================ */
+.service-item {
+  background: #fff;
+  border-radius: 20px;
+  padding: 30px;
+  text-align: center;
+  transition: 0.4s;
+  box-shadow: 0 15px 40px rgba(0,0,0,0.1);
+  position: relative;
+  overflow: hidden;
+}
+
+.service-item::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 5px;
+  background: linear-gradient(90deg, #4f46e5, #9333ea);
+  top: 0;
+  left: 0;
+}
+
+.service-item:hover {
+  transform: translateY(-15px) scale(1.02);
+  box-shadow: 0 25px 60px rgba(79,70,229,0.3);
+}
+
+.service-item i {
+  font-size: 40px;
+  margin-bottom: 15px;
+  color: #9333ea;
+}
+
+/* ===============================
+   PROJECTS SECTION
+================================ */
+#projects {
+  background: linear-gradient(135deg, #eef2ff, #faf5ff);
+}
+
+#projects ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+#projects ul li {
+  padding-left: 20px;
+  position: relative;
+  margin-bottom: 10px;
+}
+
+#projects ul li::before {
+  content: "✔";
+  position: absolute;
+  left: 0;
+  color: #22c55e;
+  font-weight: bold;
+}
+
+/* ===============================
+   CONTACT SECTION
+================================ */
+#contact {
+  background: linear-gradient(135deg, #4f46e5, #9333ea);
+  color: #fff;
+}
+
+#contact .form-control {
+  border-radius: 30px;
+  padding: 12px 20px;
+  border: none;
+}
+
+#contact textarea {
+  border-radius: 20px;
+}
+
+#contact button {
+  border-radius: 30px;
+  padding: 12px 40px;
+  font-weight: bold;
+  background: #ffdd57;
+  border: none;
+  color: #000;
+  transition: 0.3s;
+}
+
+#contact button:hover {
+  background: #22c55e;
+  color: #fff;
+}
+
+/* ===============================
+   FOOTER
+================================ */
+footer {
+  background: #111827;
+  color: #fff;
+  padding: 20px;
+}
+
+/* ===============================
+   RESPONSIVE
+================================ */
+@media(max-width:768px) {
+  .home h1 {
+    font-size: 40px;
+  }
+}
