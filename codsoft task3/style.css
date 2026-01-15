@@ -1,0 +1,85 @@
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+/* Background */
+.calculator-bg {
+    background: linear-gradient(135deg, #4f46e5, #9333ea, #ec4899);
+    background-size: 300% 300%;
+    animation: gradientMove 8s ease infinite;
+}
+
+@keyframes gradientMove {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* Glassmorphism */
+.glassmorphism-calculator {
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(12px);
+    width: 350px;
+}
+
+/* Screen */
+.result-screen {
+    min-height: 70px;
+}
+
+/* Buttons */
+button {
+    padding: 15px;
+    border-radius: 12px;
+    font-size: 18px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+/* Number buttons */
+.btn-number {
+    background: #3b82f6;
+    color: #fff;
+}
+.btn-number:hover {
+    background: #2563eb;
+    transform: scale(1.05);
+}
+
+/* Operator buttons */
+.btn-operator {
+    background: #6b7280;
+    color: #fff;
+}
+.btn-operator:hover {
+    background: #4b5563;
+}
+
+/* Clear */
+.btn-clear {
+    background: #ef4444;
+    color: #fff;
+}
+.btn-clear:hover {
+    background: #dc2626;
+}
+
+/* Delete */
+.btn-delete {
+    background: #f59e0b;
+    color: #fff;
+}
+.btn-delete:hover {
+    background: #d97706;
+}
+
+/* Equal */
+.btn-equal {
+    background: #22c55e;
+    color: #fff;
+    font-size: 22px;
+}
+.btn-equal:hover {
+    background: #16a34a;
+    transform: scale(1.03);
+}
